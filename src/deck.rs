@@ -16,7 +16,7 @@ pub fn new_std_deck(shuffled: bool) -> Vec<Card> {
                 }
             }
 
-            let new_card: Card = (rank, suit);
+            let new_card: Card = Card { rank, suit };
             new_deck.push(new_card);
         }
 

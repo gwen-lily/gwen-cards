@@ -1,6 +1,12 @@
 use strum_macros::EnumIter;
 
-pub type Card = (Rank, Suit);
+
+#[derive(Debug, PartialEq, Eq)]
+pub struct Card {
+    pub rank: Rank,
+    pub suit: Suit,
+}
+
 
 #[derive(EnumIter, Debug, PartialEq, Eq, Clone, Copy)]
 pub enum Rank {
