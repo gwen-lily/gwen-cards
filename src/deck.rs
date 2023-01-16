@@ -10,10 +10,8 @@ pub fn new_std_deck(shuffled: bool) -> Vec<Card> {
 
     for suit in Suit::iter() {
         for rank in Rank::iter() {
-            if rank == Rank::Joker {
-                if suit == Suit::Diamonds || suit == Suit::Clubs {
-                    continue
-                }
+            if rank == Rank::Joker && (suit == Suit::Diamonds || suit == Suit::Clubs) {
+                continue
             }
 
             let new_card: Card = Card { rank, suit };
@@ -22,7 +20,7 @@ pub fn new_std_deck(shuffled: bool) -> Vec<Card> {
 
     }
 
-    if shuffled == true {
+    if shuffled {
         let mut rng = thread_rng();
         new_deck.shuffle(&mut rng)
     }

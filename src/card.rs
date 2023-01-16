@@ -8,7 +8,7 @@ pub struct Card {
 }
 
 
-#[derive(EnumIter, Debug, PartialEq, Eq, Clone, Copy)]
+#[derive(EnumIter, Debug, PartialEq, Eq, PartialOrd, Ord, Clone, Copy)]
 pub enum Rank {
     Two,
     Three,
