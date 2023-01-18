@@ -38,3 +38,15 @@ pub enum Color {
     Red,
     Black,
 }
+
+
+impl Card {
+    fn color(&self) -> Color {
+        match self.suit {
+            Suit::Hearts | Suit::Diamonds => {
+                Color::Red
+            },
+            _ => { Color::Black }
+        }
+    }
+}
