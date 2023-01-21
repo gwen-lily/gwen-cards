@@ -18,6 +18,7 @@ pub enum Rank {
     Seven,
     Eight,
     Nine,
+    Ten,
     Jack,
     Queen,
     King,
@@ -43,10 +44,8 @@ pub enum Color {
 impl Card {
     fn color(&self) -> Color {
         match self.suit {
-            Suit::Hearts | Suit::Diamonds => {
-                Color::Red
-            },
-            _ => { Color::Black }
+            Suit::Hearts | Suit::Diamonds => Color::Red,
+            _ => Color::Black
         }
     }
 }
